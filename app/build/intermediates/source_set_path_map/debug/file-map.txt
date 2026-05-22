@@ -1,0 +1,7 @@
+com.deskpet.app-pngs-0 /data/data/com.termux/files/home/PetDesk/app/build/generated/res/pngs/debug
+com.deskpet.app-resValues-1 /data/data/com.termux/files/home/PetDesk/app/build/generated/res/resValues/debug
+com.deskpet.app-packageDebugResources-2 /data/data/com.termux/files/home/PetDesk/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.deskpet.app-packageDebugResources-3 /data/data/com.termux/files/home/PetDesk/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.deskpet.app-merged_res-4 /data/data/com.termux/files/home/PetDesk/app/build/intermediates/merged_res/debug
+com.deskpet.app-debug-5 /data/data/com.termux/files/home/PetDesk/app/src/debug/res
+com.deskpet.app-main-6 /data/data/com.termux/files/home/PetDesk/app/src/main/res

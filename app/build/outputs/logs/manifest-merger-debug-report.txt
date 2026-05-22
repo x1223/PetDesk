@@ -1,0 +1,76 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.termux/files/home/.gradle/caches/transforms-3/4acd40b72164f02e845c37ffd2270ef8/transformed/jetified-viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:4:5-78
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:4:22-75
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:5:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:6:5-89
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:6:22-86
+uses-permission#android.permission.INTERNET
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:8:22-76
+application
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:10:5-30:19
+INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:10:5-30:19
+	android:extractNativeLibs
+		INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml
+	android:label
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:13:9-32
+	android:icon
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:11:9-35
+activity#com.deskpet.MainActivity
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:15:9-23:20
+	android:exported
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:17:13-36
+	android:theme
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:18:13-49
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:16:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:21:27-74
+service#com.deskpet.PetService
+ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:25:9-28:58
+	android:exported
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:27:13-37
+	android:foregroundServiceType
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:28:13-55
+	android:name
+		ADDED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:26:13-39
+uses-sdk
+INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml
+INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.termux/files/home/.gradle/caches/transforms-3/4acd40b72164f02e845c37ffd2270ef8/transformed/jetified-viewbinding-8.2.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.termux/files/home/.gradle/caches/transforms-3/4acd40b72164f02e845c37ffd2270ef8/transformed/jetified-viewbinding-8.2.2/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml

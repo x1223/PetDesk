@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.deskpet.app-merged_res-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/data/data/com.termux/files/home/PetDesk/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "294"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "296",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "535"
+                    }
+                },
+                {
+                    "source": "/data/data/com.termux/files/home/PetDesk/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,3,5,4",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,100,220,157",
+                        "endColumns": "44,56,75,62",
+                        "endOffsets": "95,152,291,215"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,100,157,233",
+                        "endColumns": "44,56,75,62",
+                        "endOffsets": "95,152,228,291"
+                    }
+                }
+            ]
+        }
+    ]
+}

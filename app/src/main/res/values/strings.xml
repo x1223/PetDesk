@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PetDesk</string>
+    <string name="notification_channel">PetDesk</string>
+    <string name="notification_title">PetDesk Running</string>
+    <string name="notification_text">Tap to interact with your pet</string>
+</resources>

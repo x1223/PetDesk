@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PetDesk</string>
+    <string name="notification_channel">PetDesk</string>
+    <string name="notification_text">Tap to interact with your pet</string>
+    <string name="notification_title">PetDesk Running</string>
+    <style name="Theme.DeskPet" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

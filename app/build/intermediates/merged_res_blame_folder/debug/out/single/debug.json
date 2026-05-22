@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f14.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f14.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f01.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f01.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_happy.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_happy.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f13.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f13.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f16.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f16.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f15.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f15.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_thinking.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_thinking.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f08.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f08.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f07.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f07.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_building.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_building.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f03.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f03.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f04.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f04.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f10.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f10.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f16.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f16.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f18.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f18.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f06.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f06.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f05.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f05.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f17.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f17.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f11.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f11.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f12.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f12.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f12.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f12.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f08.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f08.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f06.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f06.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f13.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f13.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f09.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f09.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f01.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f01.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_idle.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_idle.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f07.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f07.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f15.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f15.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f02.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f02.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f14.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f14.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f18.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f18.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_error.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_error.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f02.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f02.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f03.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f03.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_sleeping.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_sleeping.xml"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f10.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f10.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f11.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f11.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f09.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f09.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f04.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f04.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s2_f05.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s2_f05.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_s1_f17.png.flat",
+        "source": "com.deskpet.app-main-6:/drawable/s1_f17.png"
+    },
+    {
+        "merged": "com.deskpet.app-merged_res-4:/drawable_anim_working.xml.flat",
+        "source": "com.deskpet.app-main-6:/drawable/anim_working.xml"
+    }
+]

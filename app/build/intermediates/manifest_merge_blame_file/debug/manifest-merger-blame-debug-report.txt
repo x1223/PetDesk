@@ -1,0 +1,65 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.deskpet" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="26"
+7        android:targetSdkVersion="34" />
+8
+9    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+9-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:4:5-78
+9-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:4:22-75
+10    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+10-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:5:5-77
+10-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:5:22-74
+11    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+11-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:6:5-89
+11-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:6:22-86
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:7:5-67
+12-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:8:5-79
+13-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:8:22-76
+14
+15    <application
+15-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:10:5-30:19
+16        android:allowBackup="true"
+16-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:11:9-35
+17        android:debuggable="true"
+18        android:extractNativeLibs="false"
+19        android:icon="@mipmap/ic_launcher"
+19-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:12:9-43
+20        android:label="PetDesk" >
+20-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:13:9-32
+21        <activity
+21-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:15:9-23:20
+22            android:name="com.deskpet.MainActivity"
+22-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:16:13-41
+23            android:exported="true"
+23-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:17:13-36
+24            android:theme="@style/Theme.DeskPet" >
+24-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:18:13-49
+25            <intent-filter>
+25-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:19:13-22:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:20:17-69
+26-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:20:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:21:17-77
+28-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:21:27-74
+29            </intent-filter>
+30        </activity>
+31
+32        <service
+32-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:25:9-28:58
+33            android:name="com.deskpet.PetService"
+33-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:26:13-39
+34            android:exported="false"
+34-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:27:13-37
+35            android:foregroundServiceType="specialUse" />
+35-->/data/data/com.termux/files/home/PetDesk/app/src/main/AndroidManifest.xml:28:13-55
+36    </application>
+37
+38</manifest>
