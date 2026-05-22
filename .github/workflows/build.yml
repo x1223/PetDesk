@@ -27,16 +27,37 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
-      - name: Download Gradle
+      - name: Debug env
         run: |
-          curl -sL https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip -o gradle.zip
-          unzip -oq gradle.zip
-          ls gradle-8.2/bin/
+          echo "=== Java ==="
+          java -version 2>&1
+          echo "=== JAVA_HOME ==="
+          echo $JAVA_HOME
+          echo "=== Android SDK ==="
+          echo $ANDROID_HOME
+          ls -la $ANDROID_HOME 2>/dev/null || echo "ANDROID_HOME not found"
+          ls -la /opt/android-sdk 2>/dev/null || echo "/opt/android-sdk not found"
+          echo "=== Which gradle ==="
+          which gradle || echo "gradle not in PATH"
+          echo "=== GitHub workspace ==="
+          ls -la /github/workspace 2>/dev/null
+          ls -la $(pwd) 2>/dev/null
 
-      - name: Build
+      - name: Download Gradle directly
+        run: |
+          echo "=== Downloading Gradle ==="
+          curl -sL -o gradle.zip "https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip"
+          unzip -oq gradle.zip
+          ls -la gradle-8.2/bin/gradle
+          ./gradle-8.2/bin/gradle --version
+
+      - name: Build APK
         run: |
           cd PetDesk
-          ../gradle-8.2/bin/gradle assembleDebug --no-daemon --no-build-cache --rerun-tasks 2>&1
+          ls -la
+          ls -la app/src/main/
+          echo "=== Building with local Gradle ==="
+          ../gradle-8.2/bin/gradle assembleDebug --no-daemon --stacktrace 2>&1 | tail -200
 
       - name: Upload APK
         if: success()
