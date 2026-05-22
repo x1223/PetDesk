@@ -10,12 +10,14 @@ jobs:
       - uses: actions/setup-java@v4
         with: { java-version: '17', distribution: 'temurin' }
       - uses: android-actions/setup-android@v2
-      - run: |
+      - name: Setup Gradle
+        run: |
           curl -sL -o gradle.zip "https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip"
           unzip -oq gradle.zip
+      - name: Build with Gradle
+        run: |
           ./gradle-8.2/bin/gradle -v
-          cd PetDesk
-          ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
+          cd PetDesk && ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
       - uses: actions/upload-artifact@v4
         if: success()
         with:
