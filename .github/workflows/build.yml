@@ -1,57 +1,23 @@
-name: Build Android APK
+name: Build
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-concurrency:
-  group: build-${{ github.ref }}
-  cancel-in-progress: true
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
-
-      - name: Print environment
-        run: |
-          pwd
-          java -version 2>&1
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          echo "JAVA_HOME=$JAVA_HOME"
-          ls "github/workspace"
-          ls "PetDesk" 2>/dev/null || echo "PetDesk not in github/workspace"
-
-      - name: Download Gradle
-        run: |
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { java-version: '17', distribution: 'temurin' }
+      - uses: android-actions/setup-android@v2
+      - run: |
           curl -sL -o gradle.zip "https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip"
           unzip -oq gradle.zip
-          ls gradle-8.2/bin/gradle
-          ./gradle-8.2/bin/gradle --version
-
-      - name: Build APK
-        run: |
+          ./gradle-8.2/bin/gradle -v
           cd PetDesk
-          ls -la
-          ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1 | tail -50
-
-      - name: Upload APK
+          ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
+      - uses: actions/upload-artifact@v4
         if: success()
-        uses: actions/upload-artifact@v4
         with:
-          name: pet-desk-apk
+          name: apk
           path: PetDesk/app/build/outputs/apk/debug/app-debug.apk
