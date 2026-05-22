@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      GRADLE_HOME: /opt/gradle/gradle-8.2
+      PATH: /opt/gradle/gradle-8.2/bin:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/usr/bin:/bin:$PATH
       ANDROID_HOME: /opt/android-sdk
       ANDROID_SDK_ROOT: /opt/android-sdk
 
@@ -29,19 +31,17 @@ jobs:
         with:
           path: /opt/android-sdk
 
-      - name: Download Gradle
+      - name: Download and setup Gradle
         run: |
-          mkdir -p /opt/gradle
           curl -sL https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip -o /tmp/gradle.zip
-          unzip -q /tmp/gradle.zip -d /opt/gradle
-          ls /opt/gradle/
+          unzip -oq /tmp/gradle.zip -d /opt/gradle
+          ls -la /opt/gradle/
+          /opt/gradle/gradle-8.2/bin/gradle --version
 
       - name: Build Debug APK
         run: |
-          export PATH=/opt/gradle/gradle-8.2/bin:$PATH
-          echo "Gradle version: $(gradle --version)"
           cd PetDesk
-          gradle assembleDebug --no-daemon --warning-mode=all 2>&1 | head -100
+          /opt/gradle/gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
 
       - name: Upload APK
         if: success()
