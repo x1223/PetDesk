@@ -22,7 +22,12 @@ jobs:
           pwd && ls -la
           ./gradle-8.2/bin/gradle -v 2>&1 | head -10
           ./gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1 | tee /tmp/build.log
-          echo "EXIT CODE: $?"
+          EXIT_CODE=${PIPESTATUS[0]}
+          echo "EXIT CODE: $EXIT_CODE"
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "Build failed with exit code $EXIT_CODE"
+            exit 1
+          fi
       - name: Debug build output
         run: |
           echo "=== APK Location ==="
