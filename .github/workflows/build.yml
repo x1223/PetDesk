@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      ANDROID_HOME: /opt/android-sdk
+      ANDROID_SDK_ROOT: /opt/android-sdk
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,18 +26,22 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
+        with:
+          path: /opt/android-sdk
+
+      - name: Download Gradle
+        run: |
+          mkdir -p /opt/gradle
+          curl -sL https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip -o /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /opt/gradle
+          ls /opt/gradle/
 
       - name: Build Debug APK
-        id: build
         run: |
+          export PATH=/opt/gradle/gradle-8.2/bin:$PATH
+          echo "Gradle version: $(gradle --version)"
           cd PetDesk
-          ls -la gradlew
-          head -5 gradlew
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon 2>&1 | tee build.log
-          cat build.log
-          echo "---APK CHECK---"
-          ls -la app/build/outputs/apk/debug/ 2>/dev/null || echo "No APK dir"
+          gradle assembleDebug --no-daemon --warning-mode=all 2>&1 | head -100
 
       - name: Upload APK
         if: success()
