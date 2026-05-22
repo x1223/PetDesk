@@ -16,13 +16,17 @@ jobs:
           unzip -oq gradle.zip
       - name: Build with Gradle
         run: |
-          ./gradle-8.2/bin/gradle -v
-          cd PetDesk && ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
-      - name: Verify APK exists
-        run: |
-          ls -la PetDesk/app/build/outputs/apk/debug/
-          file PetDesk/app/build/outputs/apk/debug/app-debug.apk 2>/dev/null || echo "APK not found"
-      - uses: actions/upload-artifact@v4
+          ./gradle-8.2/bin/gradle -v 2>&1 | head -10
+          cd PetDesk && ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1 | tee /tmp/build.log
+          echo "EXIT CODE: $?"
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v4
         with:
-          name: pet-desk-apk
+          name: build-log
+          path: /tmp/build.log
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: apk
           path: PetDesk/app/build/outputs/apk/debug/app-debug.apk
