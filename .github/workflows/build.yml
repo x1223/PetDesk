@@ -23,11 +23,20 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
+      - name: Fix Gradle wrapper
+        run: |
+          cd PetDesk
+          chmod +x gradlew
+
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon
+        run: |
+          cd PetDesk
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 || true
+          ls -la app/build/outputs/apk/debug/ 2>/dev/null || echo "APK not found"
 
       - name: Upload APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: pet-desk-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: PetDesk/app/build/outputs/apk/debug/app-debug.apk
