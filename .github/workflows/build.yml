@@ -6,15 +6,13 @@ on:
   pull_request:
     branches: [ main ]
 
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:
-      GRADLE_HOME: /opt/gradle/gradle-8.2
-      PATH: /opt/gradle/gradle-8.2/bin:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/usr/bin:/bin:$PATH
-      ANDROID_HOME: /opt/android-sdk
-      ANDROID_SDK_ROOT: /opt/android-sdk
 
     steps:
       - name: Checkout
@@ -28,20 +26,17 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
-        with:
-          path: /opt/android-sdk
 
-      - name: Download and setup Gradle
+      - name: Download Gradle
         run: |
-          curl -sL https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip -o /tmp/gradle.zip
-          unzip -oq /tmp/gradle.zip -d /opt/gradle
-          ls -la /opt/gradle/
-          /opt/gradle/gradle-8.2/bin/gradle --version
+          curl -sL https://mirrors.cloud.tencent.com/gradle/gradle-8.2-bin.zip -o gradle.zip
+          unzip -oq gradle.zip
+          ls gradle-8.2/bin/
 
-      - name: Build Debug APK
+      - name: Build
         run: |
           cd PetDesk
-          /opt/gradle/gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
+          ../gradle-8.2/bin/gradle assembleDebug --no-daemon --no-build-cache --rerun-tasks 2>&1
 
       - name: Upload APK
         if: success()
