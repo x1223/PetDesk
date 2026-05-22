@@ -16,8 +16,15 @@ jobs:
           unzip -oq gradle.zip
       - name: Build with Gradle
         run: |
-          ./gradle-8.2/bin/gradle -v
-          cd PetDesk && ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1
+          ./gradle-8.2/bin/gradle -v 2>&1 | head -10
+          cd PetDesk && ../gradle-8.2/bin/gradle assembleDebug --no-daemon 2>&1 | tee /tmp/build.log
+          echo "EXIT CODE: $?"
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: /tmp/build.log
       - uses: actions/upload-artifact@v4
         if: success()
         with:
